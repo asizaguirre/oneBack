@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
+
 
     <group android:checkableBehavior="single">
         <item
@@ -29,10 +31,6 @@
             android:id="@+id/nav_cadastro"
             android:icon="@mipmap/ic_launcher"
             android:title="Cadastro" />
-        <item
-            android:id="@+id/logout"
-            android:icon="@drawable/common_google_signin_btn_text_dark_normal"
-            android:title="Sair" />
 
 
     </group>
@@ -49,5 +47,12 @@
                 android:title="Send" />
         </menu>
     </item>
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="@string/menu_logout"
+        android:visible="true"
+        app:showAsAction="never" />
+
 
 </menu>

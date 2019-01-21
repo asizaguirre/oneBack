@@ -13,4 +13,5 @@
     <string name="signout">cadastrar</string>
     <string name="heading_cadastro">cadastro</string>
     <string name="heading_relatorios">relatórios</string>
+    <string name="menu_logout">Sair</string>
 </resources>
