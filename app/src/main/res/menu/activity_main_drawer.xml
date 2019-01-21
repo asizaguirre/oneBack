@@ -29,6 +29,11 @@
             android:id="@+id/nav_cadastro"
             android:icon="@mipmap/ic_launcher"
             android:title="Cadastro" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/common_google_signin_btn_text_dark_normal"
+            android:title="Sair" />
+
 
     </group>
 

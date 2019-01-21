@@ -161,7 +161,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int i = item.getItemId();
-        if (i == R.id.action_logout) {
+        if (i == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(this, SignInActivity.class));
             finish();
@@ -188,10 +188,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         //initializing the com.oneback.toyou.fragment object which is selected
         switch (itemId) {
             case R.id.nav_cadastro:
-                fragment = new Cadastro();
+                fragment = new CadastroFragment();
                 break;
             case R.id.nav_relatorios:
-                fragment = new Relatorios();
+                fragment = new RelatoriosFragment();
                 break;
 
         }
