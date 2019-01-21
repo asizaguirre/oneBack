@@ -6,4 +6,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="heading_recent">Recent</string>
+    <string name="heading_my_posts">Meus post</string>
+    <string name="heading_my_top_posts">Melhores posts</string>
+    <string name="menu_logout">Logout</string>
+    <string name="email">e-mail</string>
+    <string name="password">password</string>
+    <string name="signin">logar</string>
+    <string name="signout">cadastrar</string>
 </resources>
