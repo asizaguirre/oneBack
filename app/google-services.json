@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "61631552776",
+    "firebase_url": "https://toyou-b57fe.firebaseio.com",
+    "project_id": "toyou-b57fe",
+    "storage_bucket": "toyou-b57fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61631552776:android:9beb7148c80ac979",
+        "android_client_info": {
+          "package_name": "com.oneback.toyou"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61631552776-m12hn855tfpl7o65a0f4skakj82rvajg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oneback.toyou",
+            "certificate_hash": "6982e6c3a54edfa6969b76f7837a44df3457668b"
+          }
+        },
+        {
+          "client_id": "61631552776-p2747apk9mm21osutp46bckma0af8gcv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4VE8Awz_TU0ph36eeYhoMqjNXgHRXbBA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61631552776-p2747apk9mm21osutp46bckma0af8gcv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
