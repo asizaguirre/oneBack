@@ -80,20 +80,7 @@ import com.oneback.toyou.fragment.MyTopPostsFragment;
 import com.oneback.toyou.fragment.RecentPostsFragment;
 import com.oneback.toyou.fragment.RelatoriosFragment;
 
-//
-//
-//    @SuppressWarnings("StatementWithEmptyBody")
-//    @Override
-//    public boolean onNavigationItemSelected(MenuItem item) {
-//
-//        //calling the method displayselectedscreen and passing the id of selected menu
-//        displaySelectedScreen(item.getItemId());
-//        //make this method blank
-//        return true;
-//    }
-//
-//
-//}
+
 
 public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -119,7 +106,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             private final String[] mFragmentNames = new String[]{
                     getString(R.string.heading_recent),
                     getString(R.string.heading_my_posts),
-                    getString(R.string.heading_my_top_posts)
+                    getString(R.string.heading_my_top_posts),
+                    getString(R.string.heading_cadastro),
+                    getString(R.string.heading_relatorios),
             };
 
             @Override

@@ -2,4 +2,6 @@
 <resources>
     <string name="email">e-mail</string>
     <string name="password">password</string>
+    <string name="heading_cadastro">cadastro</string>
+    <string name="relatorios">heading_relatorios</string>
 </resources>

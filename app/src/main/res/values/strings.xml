@@ -11,4 +11,6 @@
     <string name="password">password</string>
     <string name="signin">logar</string>
     <string name="signout">cadastrar</string>
+    <string name="heading_cadastro">cadastro</string>
+    <string name="heading_relatorios">relatórios</string>
 </resources>
