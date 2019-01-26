@@ -98,7 +98,7 @@ public class MainActivity extends BaseActivity {
         int i = item.getItemId();
         if (i == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, SignInActivity.class));
+            startActivity(new Intent(this, CustomAuthActivity.class));
             finish();
             return true;
         } else {

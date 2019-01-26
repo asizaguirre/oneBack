@@ -5,48 +5,48 @@
     tools:showIn="navigation_view">
 
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
-
-        <item
-            android:id="@+id/nav_relatorios"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Relatorios" />
-        <item
-            android:id="@+id/nav_cadastro"
-            android:icon="@mipmap/ic_launcher"
-            android:title="Cadastro" />
-
-
-    </group>
-
-    <item android:title="Communicate">
+    <item android:title="@string/cadastrar_descontos">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/tirar_foto" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/importar_foto_da_gallery" />
+
+            <item
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/detalhes" />
+
+            <item android:title="@string/compartilhe">
+                <menu>
+                    <item
+                        android:icon="@drawable/ic_menu_share"
+                        android:title="@string/compartilhar" />
+                    <item
+                        android:icon="@drawable/ic_menu_send"
+                        android:title="@string/publicar" />
+                </menu>
+            </item>
+
         </menu>
     </item>
+
+
+    <item android:title="@string/gerencial">
+        <menu>
+            <item
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/cadastrar_atendentes" />
+            <item
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/relatorios" />
+            <item
+                android:icon="@mipmap/ic_launcher"
+                android:title="@string/meu_cadastro" />
+        </menu>
+    </item>
+
 
     <item
         android:id="@+id/action_logout"

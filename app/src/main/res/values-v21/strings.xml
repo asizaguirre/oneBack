@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="email">e-mail</string>
-    <string name="password">password</string>
-    <string name="heading_cadastro">cadastro</string>
-    <string name="relatorios">heading_relatorios</string>
-    <string name="menu_logout">Sair</string>
-</resources>

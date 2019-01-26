@@ -6,8 +6,8 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +19,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.oneback.toyou.models.User;
 
+
 public class SignInActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = "SignInActivity";
@@ -26,10 +27,10 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
 
+    private TextView mStatusTextView;
+    private TextView mDetailTextView;
     private EditText mEmailField;
     private EditText mPasswordField;
-    private Button mSignInButton;
-    private Button mSignUpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,15 +40,18 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 
-        // Views
-        mEmailField = findViewById(R.id.fieldEmail);
-        mPasswordField = findViewById(R.id.fieldPassword);
-        mSignInButton = findViewById(R.id.buttonSignIn);
-        mSignUpButton = findViewById(R.id.buttonSignUp);
 
-        // Click listeners
-        mSignInButton.setOnClickListener(this);
-        mSignUpButton.setOnClickListener(this);
+        // Views
+        mStatusTextView = findViewById(R.id.sigInStatus);
+        mDetailTextView = findViewById(R.id.sigInDetail);
+        mEmailField = findViewById(R.id.sgnInFieldEmail);
+        mPasswordField = findViewById(R.id.signInfieldPassword);
+
+        // Buttons
+        findViewById(R.id.signInButton).setOnClickListener(this);
+        findViewById(R.id.sigInCreateAccount).setOnClickListener(this);
+
+
     }
 
     @Override
@@ -88,31 +92,39 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void signUp() {
+
         Log.d(TAG, "signUp");
-        if (!validateForm()) {
-            return;
-        }
 
-        showProgressDialog();
-        String email = mEmailField.getText().toString();
-        String password = mPasswordField.getText().toString();
-
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        Log.d(TAG, "createUser:onComplete:" + task.isSuccessful());
-                        hideProgressDialog();
-
-                        if (task.isSuccessful()) {
-                            onAuthSuccess(task.getResult().getUser());
-                        } else {
-                            Toast.makeText(SignInActivity.this, "Sign Up Failed",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+        startActivity(new Intent(SignInActivity.this, ChooserActivity.class));
+        finish();
     }
+
+//    private void signUp() {
+//        Log.d(TAG, "signUp");
+//        if (!validateForm()) {
+//            return;
+//        }
+//
+//        showProgressDialog();
+//        String email = mEmailField.getText().toString();
+//        String password = mPasswordField.getText().toString();
+//
+//        mAuth.createUserWithEmailAndPassword(email, password)
+//                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        Log.d(TAG, "createUser:onComplete:" + task.isSuccessful());
+//                        hideProgressDialog();
+//
+//                        if (task.isSuccessful()) {
+//                            onAuthSuccess(task.getResult().getUser());
+//                        } else {
+//                            Toast.makeText(SignInActivity.this, "Sign Up Failed",
+//                                    Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
+//    }
 
     private void onAuthSuccess(FirebaseUser user) {
         String username = usernameFromEmail(user.getEmail());
@@ -163,9 +175,9 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        if (i == R.id.buttonSignIn) {
+        if (i == R.id.signInButton) {
             signIn();
-        } else if (i == R.id.buttonSignUp) {
+        } else if (i == R.id.sigInCreateAccount) {
             signUp();
         }
     }
