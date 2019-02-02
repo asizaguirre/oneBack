@@ -15,8 +15,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.MutableData;
+import com.google.firebase.database.Transaction;
+import com.oneback.toyou.models.Post;
 import com.oneback.toyou.models.User;
 
 
@@ -82,7 +87,9 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                         hideProgressDialog();
 
                         if (task.isSuccessful()) {
-                            onAuthSuccess(task.getResult().getUser());
+
+                            getUserDetails();
+//                            onAuthSuccess(task.getResult().getUser());
                         } else {
                             Toast.makeText(SignInActivity.this, "Sign In Failed",
                                     Toast.LENGTH_SHORT).show();
@@ -94,6 +101,10 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private void signUp() {
 
         Log.d(TAG, "signUp");
+
+
+        Toast.makeText(SignInActivity.this, "Falta cadastrar o tipo",
+                Toast.LENGTH_SHORT).show();
 
         startActivity(new Intent(SignInActivity.this, ChooserActivity.class));
         finish();
@@ -127,14 +138,58 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 //    }
 
     private void onAuthSuccess(FirebaseUser user) {
-        String username = usernameFromEmail(user.getEmail());
+     //   String username = usernameFromEmail(user.getEmail());
 
         // Write new user
-        writeNewUser(user.getUid(), username, user.getEmail());
+        //writeNewUser(user.getUid(), username, user.getEmail());
 
-        // Go to MainActivity
-        startActivity(new Intent(SignInActivity.this, MainActivity.class));
-        finish();
+//        DatabaseReference userDetais = mDatabase.child("users").child(getUid());
+//        getUserDetails(userDetais);
+
+
+    }
+
+    private void getUserDetails() {
+        DatabaseReference userDetais = mDatabase.child("users").child(getUid());
+        userDetais.runTransaction(new Transaction.Handler() {
+            @Override
+            public Transaction.Result doTransaction(MutableData mutableData) {
+                User p = mutableData.getValue(User.class);
+//                if (p == null) {
+//                    return Transaction.success(mutableData);
+//                }
+
+                if(p == null || p.userType == null){
+                    p = new User("username","email", "loja", "", "", "","","","","","","","");
+                    mDatabase.child("users").child(getUid()).child(getUid()).setValue(p);
+//                    Toast.makeText(SignInActivity.this, "Coloquei qualquer coisa nos detalhes",
+//                            Toast.LENGTH_SHORT).show();
+
+                    Log.d(TAG, "SALVOU MERDA SO PRA TESTAR");
+
+                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                    finish();
+
+
+                }else{
+                    // Go to MainActivity
+                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
+                    finish();
+                }
+
+                // Set value and report transaction success
+                mutableData.setValue(p);
+                return Transaction.success(mutableData);
+            }
+
+            @Override
+            public void onComplete(DatabaseError databaseError, boolean b,
+                                   DataSnapshot dataSnapshot) {
+                // Transaction completed
+                Log.d(TAG, "postTransaction:onComplete:" + databaseError);
+            }
+        });
+
     }
 
     private String usernameFromEmail(String email) {

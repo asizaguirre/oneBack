@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "61631552776-m12hn855tfpl7o65a0f4skakj82rvajg.apps.googleusercontent.com",
+          "client_id": "61631552776-k3oo466kk3hespggqo15fv86vhsg22hs.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.oneback.toyou",
-            "certificate_hash": "6982e6c3a54edfa6969b76f7837a44df3457668b"
+            "certificate_hash": "4918cde2fdf24b02bb145a16d17dc8dda8f8280d"
           }
         },
         {

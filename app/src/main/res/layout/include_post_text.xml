@@ -13,7 +13,7 @@
         android:ellipsize="end"
         android:maxLines="1"
         android:textStyle="bold"
-        tools:text="@string/first_post" />
+        tools:text="Postar um desconto" />
 
     <TextView
         android:id="@+id/postBody"
