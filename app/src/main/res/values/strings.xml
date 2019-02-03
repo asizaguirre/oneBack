@@ -23,6 +23,8 @@
 
     <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
 
+    <string name="usuario_logado"></string>
+
     <string name="sign_in">Sign In</string>
     <string name="create_account">Create Account</string>
     <string name="send_link">Send Link</string>
@@ -77,7 +79,7 @@
 
     <string name="id_fmt">User ID: %s</string>
     <string name="email_fmt">Email: %s</string>
-    <string name="cadastrar_descontos">cadastrar descontos</string>
+    <string name="cadastrar_descontos">Cadastrar descontos</string>
     <string name="tirar_foto">Tirar foto</string>
     <string name="importar_foto_da_gallery">importar foto</string>
     <string name="detalhes">detalhes produto</string>
@@ -90,9 +92,10 @@
     <string name="meu_cadastro">meu cadastro</string>
     <string name="menu_logout">sair</string>
     <string name="heading_recent">Descontos recentes</string>
-    <string name="heading_my_posts">Meus descpntps</string>
-    <string name="heading_my_top_posts">melhores descontos</string>
+    <string name="heading_my_posts">Meus descontos</string>
+    <string name="heading_my_top_posts">Melhores descontos</string>
     <string name="sign_up">Novo cadastro</string>
     <string name="novo_cadastro">Cadastre-se aqui</string>
     <string name="first_post">Meu primeiro desconto</string>
+    <string name="not_yet">não está implementado ainda, percebeu?</string>
 </resources>

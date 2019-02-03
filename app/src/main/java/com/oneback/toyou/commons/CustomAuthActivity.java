@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,6 +29,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.oneback.toyou.MainActivity;
+import com.oneback.toyou.R;
 
 /**
  * Demonstrate Firebase Authentication using a custom minted token. For more information, see:

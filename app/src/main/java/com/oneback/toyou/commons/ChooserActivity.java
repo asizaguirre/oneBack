@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +26,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.oneback.toyou.R;
 
 /**
  * Simple list-based Activity to redirect to one of the other Activities. This Activity does not

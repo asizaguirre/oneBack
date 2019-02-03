@@ -8,42 +8,39 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/firebase_lockup_400"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignInActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme" />
+        <activity android:name=".MainActivity" />
 
+        <activity android:name=".CadastroActivity" />
+        <activity android:name=".MainActivityTo" />
+        <activity android:name=".SignInActivity" />
         <activity android:name=".NewPostActivity" />
-        <activity android:name=".BaseActivity" />
+        <activity android:name=".commons.BaseActivity" />
         <activity android:name=".PostDetailActivity" />
-        <activity android:name=".ChooserActivity" />
-        <activity android:name=".AnonymousAuthActivity" />
-
-
-        <activity android:name=".EmailPasswordActivity" />
+        <activity android:name=".commons.ChooserActivity" />
+        <activity android:name=".commons.AnonymousAuthActivity" />
+        <activity android:name=".commons.EmailPasswordActivity" />
         <activity
-            android:name=".CustomAuthActivity"
+            android:name=".commons.CustomAuthActivity"
             android:label="@string/label_custom_auth" />
         <activity
-            android:name=".GoogleSignInActivity"
+            android:name=".commons.GoogleSignInActivity"
             android:label="@string/label_google_sign_in" />
         <activity
-            android:name=".FacebookLoginActivity"
+            android:name=".commons.FacebookLoginActivity"
             android:label="@string/label_facebook_login" />
-
         <activity
-            android:name=".PasswordlessActivity"
+            android:name=".commons.PasswordlessActivity"
             android:label="@string/label_passwordless"
             android:launchMode="singleTop">
             <intent-filter>

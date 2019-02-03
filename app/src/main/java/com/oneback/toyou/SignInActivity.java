@@ -21,7 +21,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Transaction;
-import com.oneback.toyou.models.Post;
+import com.oneback.toyou.commons.BaseActivity;
+import com.oneback.toyou.commons.ChooserActivity;
 import com.oneback.toyou.models.User;
 
 
@@ -162,17 +163,12 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                 if(p == null || p.userType == null){
                     p = new User("username","email", "loja", "", "", "","","","","","","","");
                     mDatabase.child("users").child(getUid()).child(getUid()).setValue(p);
-//                    Toast.makeText(SignInActivity.this, "Coloquei qualquer coisa nos detalhes",
-//                            Toast.LENGTH_SHORT).show();
-
-                    Log.d(TAG, "SALVOU MERDA SO PRA TESTAR");
-
-                    startActivity(new Intent(SignInActivity.this, MainActivity.class));
-                    finish();
+                    Toast.makeText(SignInActivity.this, "Coloquei qualquer coisa nos detalhes",
+                            Toast.LENGTH_SHORT).show();
 
 
                 }else{
-                    // Go to MainActivity
+                    // Go to MainActivityTo
                     startActivity(new Intent(SignInActivity.this, MainActivity.class));
                     finish();
                 }

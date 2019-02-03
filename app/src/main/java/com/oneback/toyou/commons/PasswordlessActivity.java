@@ -1,4 +1,4 @@
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthActionCodeException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
+import com.oneback.toyou.R;
 
 /**
  * Demonstrate Firebase Authentication without a password, using a link sent to an
@@ -54,7 +55,7 @@ public class PasswordlessActivity extends BaseActivity implements View.OnClickLi
         mSignInButton = findViewById(R.id.passwordlessSignInButton);
         mSignOutButton = findViewById(R.id.signOutButton);
 
-        mEmailField = findViewById(R.id.fieldEmail);
+        mEmailField = findViewById(R.id.fieldEmailAnonymous);
         mStatusText = findViewById(R.id.status);
 
         mSendLinkButton.setOnClickListener(this);

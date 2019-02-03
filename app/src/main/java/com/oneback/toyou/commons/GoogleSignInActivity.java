@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,6 +36,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.oneback.toyou.MainActivity;
+import com.oneback.toyou.R;
 
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.

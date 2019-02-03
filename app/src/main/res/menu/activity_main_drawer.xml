@@ -5,12 +5,17 @@
     tools:showIn="navigation_view">
 
 
-    <item android:title="@string/cadastrar_descontos">
+    <item
+        android:enabled="true"
+        android:title="@string/cadastrar_descontos"
+        tools:onClick="@string/not_yet">
         <menu>
             <item
+                android:enabled="false"
                 android:icon="@drawable/ic_menu_camera"
                 android:title="@string/tirar_foto" />
             <item
+                android:enabled="false"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="@string/importar_foto_da_gallery" />
 
@@ -18,12 +23,16 @@
                 android:icon="@drawable/ic_menu_manage"
                 android:title="@string/detalhes" />
 
-            <item android:title="@string/compartilhe">
+            <item
+                android:enabled="true"
+                android:title="@string/compartilhe">
                 <menu>
                     <item
+                        android:enabled="false"
                         android:icon="@drawable/ic_menu_share"
                         android:title="@string/compartilhar" />
                     <item
+                        android:enabled="false"
                         android:icon="@drawable/ic_menu_send"
                         android:title="@string/publicar" />
                 </menu>
@@ -33,15 +42,20 @@
     </item>
 
 
-    <item android:title="@string/gerencial">
+    <item
+        android:enabled="true"
+        android:title="@string/gerencial">
         <menu>
             <item
+                android:enabled="false"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="@string/cadastrar_atendentes" />
             <item
+                android:enabled="false"
                 android:icon="@drawable/ic_menu_gallery"
                 android:title="@string/relatorios" />
             <item
+                android:enabled="false"
                 android:icon="@mipmap/ic_launcher"
                 android:title="@string/meu_cadastro" />
         </menu>
@@ -50,6 +64,7 @@
 
     <item
         android:id="@+id/action_logout"
+        android:enabled="true"
         android:title="@string/menu_logout"
         android:visible="true"
         app:showAsAction="never" />

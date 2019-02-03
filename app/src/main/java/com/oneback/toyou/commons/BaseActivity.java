@@ -1,4 +1,4 @@
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.oneback.toyou.R;
 
 public class BaseActivity extends AppCompatActivity {
 

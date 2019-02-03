@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

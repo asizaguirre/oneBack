@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.oneback.toyou;
+package com.oneback.toyou.commons;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,6 +32,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.oneback.toyou.R;
+import com.oneback.toyou.SignInActivity;
 
 public class EmailPasswordActivity extends BaseActivity implements
         View.OnClickListener {
@@ -55,7 +57,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         // Views
         mStatusTextView = findViewById(R.id.status);
         mDetailTextView = findViewById(R.id.detail);
-        mEmailField = findViewById(R.id.fieldEmail);
+        mEmailField = findViewById(R.id.fieldEmailAnonymous);
         mPasswordField = findViewById(R.id.fieldPassword);
 
         // Buttons
@@ -160,7 +162,7 @@ public class EmailPasswordActivity extends BaseActivity implements
     private void signOut() {
         mAuth.signOut();
         //  updateUI(null);
-        // Go to MainActivity
+        // Go to MainActivityTo
         startActivity(new Intent(EmailPasswordActivity.this, SignInActivity.class));
         finish();
     }

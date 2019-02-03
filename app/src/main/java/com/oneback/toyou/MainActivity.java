@@ -27,6 +27,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.oneback.toyou.commons.BaseActivity;
 import com.oneback.toyou.fragment.MyPostsFragment;
 import com.oneback.toyou.fragment.MyTopPostsFragment;
 import com.oneback.toyou.fragment.RecentPostsFragment;
@@ -34,7 +35,7 @@ import com.oneback.toyou.fragment.RecentPostsFragment;
 
 public class MainActivity extends BaseActivity {
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivityTo";
 
     private FragmentPagerAdapter mPagerAdapter;
     private ViewPager mViewPager;
@@ -43,6 +44,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         // Create the adapter that will return a fragment for each section
         mPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
@@ -72,6 +74,9 @@ public class MainActivity extends BaseActivity {
                 return mFragmentNames[position];
             }
         };
+
+
+
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mPagerAdapter);
@@ -98,7 +103,7 @@ public class MainActivity extends BaseActivity {
         int i = item.getItemId();
         if (i == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, SignInActivity.class));
+            startActivity(new Intent(this, LoginActivity.class));
             finish();
             return true;
         } else {
