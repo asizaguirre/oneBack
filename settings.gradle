@@ -7,4 +7,4 @@ include ':app'
 //include ':internal:lint'
 //project(':internal:lint').projectDir = file('../internal/lint')
 //include ':internal:chooser'
-//project(':internal:chooser').projectDir = file('../internal/chooser')
+//project(':internal:chooser').pr/home/bugs/Downloads/google-services.jsonojectDir = file('../internal/chooser')

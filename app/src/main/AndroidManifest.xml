@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oneback.toyou">
+    package="br.com.oneback">
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -19,40 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
 
+        <activity android:name=".commons.BaseActivity" />
+        <activity android:name=".commons.EmailPasswordActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".CadastroActivity" />
         <activity android:name=".MainActivityTo" />
-        <activity android:name=".SignInActivity" />
         <activity android:name=".NewPostActivity" />
-        <activity android:name=".commons.BaseActivity" />
         <activity android:name=".PostDetailActivity" />
-        <activity android:name=".commons.ChooserActivity" />
-        <activity android:name=".commons.AnonymousAuthActivity" />
-        <activity android:name=".commons.EmailPasswordActivity" />
-        <activity
-            android:name=".commons.CustomAuthActivity"
-            android:label="@string/label_custom_auth" />
+
         <activity
             android:name=".commons.GoogleSignInActivity"
             android:label="@string/label_google_sign_in" />
-        <activity
-            android:name=".commons.FacebookLoginActivity"
-            android:label="@string/label_facebook_login" />
-        <activity
-            android:name=".commons.PasswordlessActivity"
-            android:label="@string/label_passwordless"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <data
-                    android:host="your-project-id.firebaseapp.com"
-                    android:scheme="https" />
-
-                <category android:name="android.intent.category.BROWSABLE" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
 
     </application>
 
